@@ -3,7 +3,7 @@ package proyecto.pkg3.evaluacion;
 
 /**
  *
- * @author DAW108
+ * @author DAW107, DAW108
  */
 public class Proyecto3Evaluacion {
 

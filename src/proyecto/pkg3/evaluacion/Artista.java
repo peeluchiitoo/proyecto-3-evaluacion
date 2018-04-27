@@ -1,21 +1,25 @@
-
 package proyecto.pkg3.evaluacion;
 
 /**
  *
- * @author DAW107
+ * @author DAW107, DAW108
+ * @version 1.0
  */
-public class Artistas {
+public class Artista {
+
+    // Atributos de la clase artistas
     int id;
     String nombre;
     char género;
 
-    public Artistas(int id, String nombre, char género) {
+    // Metodos de la clase artistas
+    public Artista(int id, String nombre, char género) {
         this.id = id;
         this.nombre = nombre;
         this.género = género;
     }
 
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -39,6 +43,11 @@ public class Artistas {
     public void setGénero(char género) {
         this.género = género;
     }
-    
-    
+
+    // To String donde mostramos los datos de la clase artistas
+    @Override
+    public String toString() {
+        return "Artistas{" + "id=" + id + ", nombre=" + nombre + ", g\u00e9nero=" + género + '}';
+    }
+
 }

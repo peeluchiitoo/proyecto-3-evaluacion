@@ -9,18 +9,19 @@ import java.util.Calendar;
 
 /**
  *
- * @author DAW107
+ * @author DAW107, DAW108
  */
 public class Concierto {
+    // Atributos de la clase conciertos
     int id, hora;
     Calendar fecha;
-
+    // Metodos de la clase conciertos 
     public Concierto(int id, int hora, Calendar fecha) {
         this.id = id;
         this.hora = hora;
         this.fecha = fecha;
     }
-
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -43,6 +44,11 @@ public class Concierto {
 
     public void setFecha(Calendar fecha) {
         this.fecha = fecha;
+    }
+    // To String donde mostramos los datos de la clase concierto
+    @Override
+    public String toString() {
+        return "Concierto{" + "id=" + id + ", hora=" + hora + ", fecha=" + fecha + '}';
     }
     
     
