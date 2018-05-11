@@ -11,16 +11,16 @@ import java.util.Calendar;
  *
  * @author DAW108
  */
-public class descuento {
+public class Descuento {
 
     private int id;
     private double cantidad;
     private Calendar fechavalidez;
 
-    public descuento() {
+    public Descuento() {
     }
 
-    public descuento(int id, double cantidad, Calendar fechavalidez) {
+    public Descuento(int id, double cantidad, Calendar fechavalidez) {
         this.id = id;
         this.cantidad = cantidad;
         this.fechavalidez = fechavalidez;
