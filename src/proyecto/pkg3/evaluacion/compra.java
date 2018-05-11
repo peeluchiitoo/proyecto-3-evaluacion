@@ -15,10 +15,10 @@ public class Compra {
     private double precioTotal;
     private char metododepago;
 
-    public compra() {
+    public Compra() {
     }
 
-    public compra(int id, double precioTotal, char metododepago) {
+    public Compra(int id, double precioTotal, char metododepago) {
         this.id = id;
         this.precioTotal = precioTotal;
         this.metododepago = metododepago;
@@ -47,5 +47,6 @@ public class Compra {
     public void setMetododepago(char metododepago) {
         this.metododepago = metododepago;
     }
+    
 
 }
