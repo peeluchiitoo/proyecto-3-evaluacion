@@ -9,7 +9,7 @@ package proyecto.pkg3.evaluacion;
  *
  * @author DAW108
  */
-public class compra {
+public class Compra {
 
     private int id;
     private double precioTotal;
