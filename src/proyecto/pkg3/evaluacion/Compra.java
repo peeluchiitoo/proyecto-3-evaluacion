@@ -5,6 +5,8 @@
  */
 package proyecto.pkg3.evaluacion;
 
+import java.util.Calendar;
+
 /**
  *
  * @author DAW108
@@ -47,6 +49,9 @@ public class Compra {
     public void setMetododepago(char metododepago) {
         this.metododepago = metododepago;
     }
-    
+
+    public void ComprarEntrada(Calendar fecha) {
+
+    }
 
 }
