@@ -20,7 +20,7 @@ public class Concierto {
 
     // Metodos de la clase conciertos 
     public Concierto(int id, int hora, Calendar fecha) {
-        if () {
+        if (id >0) {
           
         } else {
             this.id = id;
