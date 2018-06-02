@@ -11,7 +11,13 @@ public class Gira {
     // Atributos de la clase gira
     String nombre;
     Calendar fechaApertura,fechaCierre;
-    // Metodos de la clase gira 
+    
+    /**
+     * 
+     * @param nombre
+     * @param fechaApertura
+     * @param fechaCierre 
+     */
     public Gira(String nombre, Calendar fechaApertura, Calendar fechaCierre) {
         this.nombre = nombre;
         this.fechaApertura = fechaApertura;

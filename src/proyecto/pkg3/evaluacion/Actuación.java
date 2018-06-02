@@ -10,9 +10,16 @@ public class Actuación {
     // Atributos de la clase actuacion
     int id, NumeroSecuencia, duración;
 
-    // Metodos de la clase actuacion 
+    /**
+     * 
+     * @param id
+     * @param NumeroSecuencia
+     * @param duración 
+     */
     public Actuación(int id, int NumeroSecuencia, int duración) {
-        this.id = id;
+        if (this.id > 0) {
+            this.id = id;
+        }
         this.NumeroSecuencia = NumeroSecuencia;
         this.duración = duración;
     }
@@ -47,13 +54,13 @@ public class Actuación {
     public String toString() {
         return "Actuaci\u00f3n{" + "id=" + id + ", NumeroSecuencia=" + NumeroSecuencia + ", duraci\u00f3n=" + duración + '}';
     }
-    
+
     /**
-     * 
+     *
      * @param id
-     * @return 
+     * @return
      */
-    public boolean consultarActuacion(int id){
+    public boolean consultarActuacion(int id) {
         return true;
     }
 

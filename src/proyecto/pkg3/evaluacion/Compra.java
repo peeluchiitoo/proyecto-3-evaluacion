@@ -19,9 +19,16 @@ public class Compra {
 
     public Compra() {
     }
-
+    /**
+     * 
+     * @param id
+     * @param precioTotal
+     * @param metododepago 
+     */
     public Compra(int id, double precioTotal, char metododepago) {
-        this.id = id;
+        if (this.id > 0) {
+            this.id = id;
+        }
         this.precioTotal = precioTotal;
         this.metododepago = metododepago;
     }

@@ -12,9 +12,16 @@ public class Artista {
     String nombre;
     char género;
 
-    // Metodos de la clase artistas
+    /**
+     * 
+     * @param id
+     * @param nombre
+     * @param género 
+     */
     public Artista(int id, String nombre, char género) {
-        this.id = id;
+        if (this.id > 0) {
+            this.id = id;
+        }
         this.nombre = nombre;
         this.género = género;
     }

@@ -15,8 +15,16 @@ public class entrada {
     private double real;
     private boolean VIP;
 
+    /**
+     *
+     * @param id
+     * @param real
+     * @param VIP
+     */
     public entrada(int id, double real, boolean VIP) {
-        this.id = id;
+        if (this.id > 0) {
+            this.id = id;
+        }
         this.real = real;
         this.VIP = VIP;
     }

@@ -20,9 +20,18 @@ public class usuario {
 
     public usuario() {
     }
-
+    /**
+     * 
+     * @param id
+     * @param nombre
+     * @param apellidos
+     * @param NIF
+     * @param email 
+     */
     public usuario(int id, String nombre, String apellidos, String NIF, String email) {
-        this.id = id;
+        if (this.id > 0) {
+            this.id = id;
+        }
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.NIF = NIF;

@@ -19,9 +19,17 @@ public class reserva {
 
     public reserva() {
     }
-
+    
+    /**
+     * 
+     * @param id
+     * @param fechamax
+     * @param fechacanje 
+     */
     public reserva(int id, Calendar fechamax, Calendar fechacanje) {
-        this.id = id;
+        if (this.id > 0) {
+            this.id = id;
+        }
         this.fechamax = fechamax;
         this.fechacanje = fechacanje;
     }

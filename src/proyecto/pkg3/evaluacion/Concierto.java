@@ -18,14 +18,16 @@ public class Concierto {
     int id, hora;
     Calendar fecha;
 
-    // Metodos de la clase conciertos 
+    /**
+     * 
+     * @param id
+     * @param hora
+     * @param fecha 
+     */
     public Concierto(int id, int hora, Calendar fecha) {
-        if (id >0) {
-          
-        } else {
+        if (this.id > 0) {
             this.id = id;
         }
-
         this.hora = hora;
         this.fecha = fecha;
     }

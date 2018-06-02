@@ -1,4 +1,3 @@
-
 package proyecto.pkg3.evaluacion;
 
 /**
@@ -6,15 +5,25 @@ package proyecto.pkg3.evaluacion;
  * @author DAW107, DAW108
  */
 public class Momento {
+
     // Atributos de la clase momento
-    int id,hora;
+    int id, hora;
     String descripción;
-    // Metodos de la clase momento
+
+    /**
+     * 
+     * @param id
+     * @param hora
+     * @param descripción 
+     */
     public Momento(int id, int hora, String descripción) {
-        this.id = id;
+        if (this.id > 0) {
+            this.id = id;
+        }
         this.hora = hora;
         this.descripción = descripción;
     }
+
     // Getters and Setters
     public int getId() {
         return id;
@@ -39,13 +48,11 @@ public class Momento {
     public void setDescripción(String descripción) {
         this.descripción = descripción;
     }
+
     // To String donde mostramos los datos de la clase momento
     @Override
     public String toString() {
         return "Momento{" + "id=" + id + ", hora=" + hora + ", descripci\u00f3n=" + descripción + '}';
     }
-    
-    
-    
-    
+
 }

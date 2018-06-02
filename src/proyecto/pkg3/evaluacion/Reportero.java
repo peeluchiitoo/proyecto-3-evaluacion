@@ -8,7 +8,15 @@ package proyecto.pkg3.evaluacion;
 public class Reportero {
     // Atributos de la clase reportero
     String nombre, apellidos, NIF,teléfono;
-    // Metodos de la clase reportero
+    
+    /**
+     * 
+     * @param nombre
+     * @param apellidos
+     * @param NIF
+     * @param teléfono 
+     */
+    
     public Reportero(String nombre, String apellidos, String NIF, String teléfono) {
         this.nombre = nombre;
         this.apellidos = apellidos;
