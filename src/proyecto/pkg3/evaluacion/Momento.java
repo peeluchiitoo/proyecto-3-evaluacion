@@ -11,11 +11,12 @@ public class Momento {
     String descripción;
 
     /**
-     * 
-     * @param id id este campo identifica a cada uno de las actuaciones que forman
-     * una gira y no podra ser menor de 0.
+     * Constructor dond se validan mediante metodos todos los parematros
+     *
+     * @param id id este campo identifica a cada uno de las actuaciones que
+     * forman una gira y no podra ser menor de 0.
      * @param hora
-     * @param descripción 
+     * @param descripción
      */
     public Momento(int id, int hora, String descripción) {
         if (this.id > 0) {

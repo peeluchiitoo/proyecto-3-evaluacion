@@ -7,13 +7,14 @@ package proyecto.pkg3.evaluacion;
 public class Reportero {
 
     // Atributos de la clase reportero
-
     String nombre, apellidos, NIF, teléfono;
 
     /**
+     * constructor donde se validan mediante una serie de metodos todos los
+     * parametros.
      *
-     * @param nombre
-     * @param apellidos
+     * @param nombre Este parámetro indica el nombre del reportero
+     * @param apellidos Este parámetro indica el apellido del reportero
      * @param NIF
      * @param teléfono
      */
@@ -35,7 +36,6 @@ public class Reportero {
     }
 
     // Getters and Setters
-
     public String getNombre() {
         return nombre;
     }
@@ -69,7 +69,6 @@ public class Reportero {
     }
 
     // To String donde mostramos los datos de la clase reportero
-
     @Override
     public String toString() {
         return "Reportero{" + "nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", tel\u00e9fono=" + teléfono + '}';

@@ -19,11 +19,11 @@ public class Concierto {
     Calendar fecha;
 
     /**
-     * 
-     * @param id id este campo identifica a cada uno de las actuaciones que forman
-     * una gira y no podra ser menor de 0.
+     *
+     * @param id id este campo identifica a cada uno de las actuaciones que
+     * forman una gira y no podra ser menor de 0.
      * @param hora
-     * @param fecha 
+     * @param fecha
      */
     public Concierto(int id, int hora, Calendar fecha) {
         if (this.id > 0) {
@@ -64,12 +64,20 @@ public class Concierto {
         return "Concierto{" + "id=" + id + ", hora=" + hora + ", fecha=" + fecha + '}';
     }
 
-    public void VerConciertos(Calendar fecha) {
+    /**
+     *
+     * @param fecha
+     */
+    public void VerConciertos() {
         Scanner teclado = new Scanner(System.in);
         String c = " ";
         String[] conciertos = {"Arenal sound", "Tomorrowland", "Rebujas", "BBK"};
-
-        System.out.println("Dime el nombre del concierto");
+        System.out.println("lista de conciertos:"
+                + "1. Arenal sound" 
+                + "2. Tomorrowland" 
+                + "3. Rebujas" 
+                + "4. BBK");
+        System.out.println("Dime el nombre del concierto___");
         c = teclado.nextLine();
 
         switch (c) {

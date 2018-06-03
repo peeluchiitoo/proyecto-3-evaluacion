@@ -6,6 +6,7 @@
 package proyecto.pkg3.evaluacion;
 
 import java.util.Calendar;
+import java.util.Scanner;
 
 /**
  *
@@ -59,6 +60,37 @@ public class Compra {
     }
 
     public void ComprarEntrada(Calendar fecha) {
+
+    }
+    
+    public void MetodoPago(Calendar fecha) {
+        Scanner teclado = new Scanner(System.in);
+        String c = " ";
+        String[] conciertos = {"tranferencia", "Cheque", "tarjeta", "contra Rembolso"};
+
+        System.out.println("Dime el nombre del concierto");
+        c = teclado.nextLine();
+
+        switch (c) {
+            case "tranferencia":
+                System.out.println("El metodo de pago seleccionado es tranferencia");
+                break;
+            case "Cheque":
+                System.out.println("El metodo de pago seleccionado es cheque");
+                break;
+            case "tarjeta":
+                System.out.println("El metodo de pago seleccionado es tarjeta");
+                break;
+            case "contra Rembolso":
+                System.out.println("El metodo de pago seleccionado es contra Rembolso");
+                break;
+            case "bit coins":
+                System.out.println("El metodo de pago seleccionado es contra bit coins");
+                break;
+            default:
+                System.out.println("no existe ese tipo de metodo de pago");
+
+        }
 
     }
 

@@ -57,4 +57,10 @@ public class entrada {
         this.VIP = VIP;
     }
 
+    @Override
+    public String toString() {
+        return "entrada{" + "id=" + id + ", real=" + real + ", VIP=" + VIP + '}';
+    }
+
+    
 }

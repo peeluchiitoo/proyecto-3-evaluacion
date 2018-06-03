@@ -8,7 +8,7 @@ package proyecto.pkg3.evaluacion;
 public class Actuación {
 
     // Atributos de la clase actuacion
-    int id, NumeroSecuencia, duración;
+    int id, NumeroSecuencia, duración; 
 
     /**
      *

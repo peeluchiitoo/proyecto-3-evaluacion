@@ -21,9 +21,10 @@ public class reserva {
     }
 
     /**
+     * Constructor donde se validan mediante metodos los distintos parametros.
      *
-     * @param id este campo identifica a cada uno de las reservas que forman
-     * una gira y no podra ser menor de 0.
+     * @param id este campo identifica a cada uno de las reservas que forman una
+     * gira y no podra ser menor de 0.
      * @param fechamax
      * @param fechacanje
      */

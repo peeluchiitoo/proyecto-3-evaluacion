@@ -99,9 +99,11 @@ public class usuario {
     }
 
     /**
+     * Este metodo nos devuelve si el DNI introducido es correcto o no
      *
      * @param NIF Variable que pasamos por teclado
-     * @return nos devolvera true o false dependiendo de si el dni es verdadero o falso
+     * @return nos devolvera true o false dependiendo de si el dni es verdadero
+     * o falso
      */
     public static boolean ValidarNIF(String NIF) {
 
@@ -133,7 +135,10 @@ public class usuario {
     }
 
     /**
-     *
+     * Este metodo nos devuelve verdadero o falso dependiendo de si es correcto
+     * el nombre introducido(que no contenga mas que letras , tanto mayusculas
+     * como minusculas) 
+     * 
      * @param nombre Variable metida por paramtero
      * @return nos devuelve true o false dependiendo de si el String del nombre
      * o de los apellidos son correctos o no
@@ -149,6 +154,15 @@ public class usuario {
         }
     }
 
+    /**
+     * valida si el apellido del usuario que estamos metiendo es correcto, esto
+     * quiere decir que no contenga mas que letras, tanto mayusculas como
+     * minusculas
+     *
+     * @param apellidos Variable metida por paramtero
+     * @return nos devuelve true o false dependiendo de si el String del nombre
+     * o de los apellidos son correctos o no
+     */
     public boolean ValidarApellidos(String apellidos) {
         boolean EsValido = true;
         boolean N = apellidos.matches("([a-z]|[A-Z]|\\s)+");
@@ -159,6 +173,7 @@ public class usuario {
             return EsValido = false;
         }
     }
+
     @Override
     public String toString() {
         return "usuario{" + "id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", email=" + email + '}';

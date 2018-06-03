@@ -11,9 +11,10 @@ public class Informe {
     String Descripción;
 
     /**
-     * 
+     * Constructor donde se calidan mediante metodos todos los parametros.
+     *
      * @param id
-     * @param Descripción 
+     * @param Descripción
      */
     public Informe(int id, String Descripción) {
         if (this.id > 0) {
