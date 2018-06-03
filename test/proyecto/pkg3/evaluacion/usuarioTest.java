@@ -36,7 +36,7 @@ public class usuarioTest {
     @Test
     public void testValidarNombre() {
         System.out.println("ValidarNombre");
-        String nombre = "pedro";
+        String nombre = "Pedro";
         usuario instance = new usuario();
         boolean expResult = true;
         boolean result = instance.ValidarNombre(nombre);
@@ -50,7 +50,7 @@ public class usuarioTest {
     @Test
     public void testValidarApellidos() {
         System.out.println("ValidarApellidos");
-        String apellidos = "delgado";
+        String apellidos = "Delgado";
         usuario instance = new usuario();
         boolean expResult = true;
         boolean result = instance.ValidarApellidos(apellidos);

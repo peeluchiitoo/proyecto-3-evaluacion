@@ -74,6 +74,15 @@ public class Gira {
 
     }
 
+    /**
+     * Este metodo nos devuelve verdadero o falso dependiendo de si es correcto
+     * el nombre introducido(que no contenga mas que letras, tanto mayusculas
+     * como minusculas)
+     *
+     * @param nombre Variable metida por paramtero
+     * @return nos devuelve true o false dependiendo de si el String del nombre
+     * o de los apellidos son correctos o no
+     */
     public boolean ValidarNombre(String nombre) {
         boolean EsValido = true;
         boolean N = nombre.matches("([a-z]|[A-Z]|\\s)+");

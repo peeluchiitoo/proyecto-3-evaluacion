@@ -7,7 +7,7 @@ package proyecto.pkg3.evaluacion;
 public class Reportero {
 
     // Atributos de la clase reportero
-    String nombre, apellidos, NIF, teléfono;
+    private String nombre, apellidos, NIF, teléfono;
 
     /**
      * constructor donde se validan mediante una serie de metodos todos los
@@ -74,6 +74,15 @@ public class Reportero {
         return "Reportero{" + "nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", tel\u00e9fono=" + teléfono + '}';
     }
 
+    /**
+     * Este metodo nos devuelve verdadero o falso dependiendo de si es correcto
+     * el nombre introducido(que no contenga mas que letras , tanto mayusculas
+     * como minusculas)
+     *
+     * @param nombre Variable metida por paramtero
+     * @return nos devuelve true o false dependiendo de si el String del nombre
+     * o de los apellidos son correctos o no
+     */
     public boolean ValidarNombre(String nombre) {
         boolean EsValido = true;
         boolean N = nombre.matches("([a-z]|[A-Z]|\\s)+");
@@ -85,6 +94,15 @@ public class Reportero {
         }
     }
 
+    /**
+     * valida si el apellido del usuario que estamos metiendo es correcto, esto
+     * quiere decir que no contenga mas que letras, tanto mayusculas como
+     * minusculas
+     *
+     * @param apellidos Variable metida por paramtero
+     * @return nos devuelve true o false dependiendo de si el String del nombre
+     * o de los apellidos son correctos o no
+     */
     public boolean ValidarApellidos(String apellidos) {
         boolean EsValido = true;
         boolean N = apellidos.matches("([a-z]|[A-Z]|\\s)+");
@@ -96,6 +114,13 @@ public class Reportero {
         }
     }
 
+    /**
+     * Este metodo nos devuelve si el DNI introducido es correcto o no
+     *
+     * @param NIF Variable que pasamos por teclado
+     * @return nos devolvera true o false dependiendo de si el dni es verdadero
+     * o falso
+     */
     public static boolean ValidarNIF(String NIF) {
 
         boolean esValido = false;
@@ -125,6 +150,14 @@ public class Reportero {
 
     }
 
+    /**
+     * En este metodo controlamos que al meter un numero de telefono solo nos
+     * deje meter numero. por lo cual solo saldria true de ser numero(false de
+     * contener algun caracter que no lo fuese).
+     *
+     * @param teléfono Introducimos el numero por parametro
+     * @return nos devuelve true si es valido y false si no lo es.
+     */
     public boolean ValidarTelefono(String teléfono) {
         boolean EsValido = true;
         boolean N = teléfono.matches("([0 - 9])");
