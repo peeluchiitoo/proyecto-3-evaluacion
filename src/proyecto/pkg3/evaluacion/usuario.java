@@ -34,10 +34,10 @@ public class usuario {
         if (this.id > 0) {
             this.id = id;
         }
-        if (ValidarString(nombre) == true) {
+        if (ValidarNombre(nombre) == true) {
             this.nombre = nombre;
         }
-        if (ValidarString(apellidos) == true) {
+        if (ValidarApellidos(apellidos) == true) {
             this.apellidos = apellidos;
         }
         if (ValidarNIF(NIF) == true) {
@@ -138,7 +138,7 @@ public class usuario {
      * @return nos devuelve true o false dependiendo de si el String del nombre
      * o de los apellidos son correctos o no
      */
-    public boolean ValidarString(String nombre) {
+    public boolean ValidarNombre(String nombre) {
         boolean EsValido = true;
         boolean N = nombre.matches("([a-z]|[A-Z]|\\s)+");
 
@@ -149,6 +149,16 @@ public class usuario {
         }
     }
 
+    public boolean ValidarApellidos(String apellidos) {
+        boolean EsValido = true;
+        boolean N = apellidos.matches("([a-z]|[A-Z]|\\s)+");
+
+        if (N == true) {
+            return EsValido;
+        } else {
+            return EsValido = false;
+        }
+    }
     @Override
     public String toString() {
         return "usuario{" + "id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", email=" + email + '}';

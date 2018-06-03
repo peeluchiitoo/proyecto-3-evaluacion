@@ -19,7 +19,10 @@ public class Gira {
      * @param fechaCierre 
      */
     public Gira(String nombre, Calendar fechaApertura, Calendar fechaCierre) {
+        
+        if (ValidarNombre(nombre) == true) {
         this.nombre = nombre;
+        }
         this.fechaApertura = fechaApertura;
         this.fechaCierre = fechaCierre;
     }
@@ -62,8 +65,23 @@ public class Gira {
      */
     public boolean consultarGira(int idGira, Calendar fechaIni, Calendar fechaFin){
         return true;
+        
+        
+        
+        
+    
     }
     
+     public boolean ValidarNombre(String nombre) {
+        boolean EsValido = true;
+        boolean N = nombre.matches("([a-z]|[A-Z]|\\s)+");
+
+        if (N == true) {
+            return EsValido;
+        } else {
+            return EsValido = false;
+        }
+    }
     
     
     

@@ -23,7 +23,9 @@ public class Artista {
         if (this.id > 0) {
             this.id = id;
         }
+        if (ValidarNombre(nombre) == true) {
         this.nombre = nombre;
+        }
         this.género = género;
     }
 
@@ -56,6 +58,18 @@ public class Artista {
     @Override
     public String toString() {
         return "Artistas{" + "id=" + id + ", nombre=" + nombre + ", g\u00e9nero=" + género + '}';
+    }
+    
+    
+    public boolean ValidarNombre(String nombre) {
+        boolean EsValido = true;
+        boolean N = nombre.matches("([a-z]|[A-Z]|\\s)+");
+
+        if (N == true) {
+            return EsValido;
+        } else {
+            return EsValido = false;
+        }
     }
 
 }
