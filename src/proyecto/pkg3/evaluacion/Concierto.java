@@ -20,7 +20,8 @@ public class Concierto {
 
     /**
      * 
-     * @param id
+     * @param id id este campo identifica a cada uno de las actuaciones que forman
+     * una gira y no podra ser menor de 0.
      * @param hora
      * @param fecha 
      */

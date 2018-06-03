@@ -15,26 +15,34 @@ public class usuario {
     private String nombre;
     private String apellidos;
     private String NIF;
-    private String email;
+    private String email; // @javamail.com sera el dominio por defecto de los emails que crearemos
     private boolean verificado = false;
 
     public usuario() {
     }
+
     /**
-     * 
-     * @param id
+     *
+     * @param id Este campo identifica a cada uno de las actuaciones que forman
+     * una gira y no podra ser menor de 0.
      * @param nombre
      * @param apellidos
-     * @param NIF
-     * @param email 
+     * @param NIF este campo comprende un String con 8 numeros y
+     * @param email
      */
     public usuario(int id, String nombre, String apellidos, String NIF, String email) {
         if (this.id > 0) {
             this.id = id;
         }
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.NIF = NIF;
+        if (ValidarString(nombre) == true) {
+            this.nombre = nombre;
+        }
+        if (ValidarString(apellidos) == true) {
+            this.apellidos = apellidos;
+        }
+        if (ValidarNIF(NIF) == true) {
+            this.NIF = NIF;
+        }
         this.email = email;
     }
 
@@ -84,6 +92,66 @@ public class usuario {
 
     public void setVerificado(boolean verificado) {
         this.verificado = verificado;
+    }
+
+    public String GeneraEmail(String email) {
+        return (this.email + "@javamail.com").toLowerCase();
+    }
+
+    /**
+     *
+     * @param NIF Variable que pasamos por teclado
+     * @return nos devolvera true o false dependiendo de si el dni es verdadero o falso
+     */
+    public static boolean ValidarNIF(String NIF) {
+
+        boolean esValido = false;
+        int i = 0;
+        int caracterASCII = 0;
+        char letra = ' ';
+        int miNIF = 0;
+        int resto = 0;
+        char[] asignacionLetra = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+
+        if (NIF.length() == 9 && Character.isLetter(NIF.charAt(8))) {
+            do {
+                caracterASCII = NIF.codePointAt(i);
+                esValido = (caracterASCII > 47 && caracterASCII < 58);
+                i++;
+            } while (i < NIF.length() - 1 && esValido);
+
+        }
+
+        if (esValido) {
+            letra = Character.toUpperCase(NIF.charAt(8));
+            miNIF = Integer.parseInt(NIF.substring(0, 8));
+            resto = miNIF % 23;
+            esValido = (letra == asignacionLetra[resto]);
+        }
+        return esValido;
+
+    }
+
+    /**
+     *
+     * @param nombre Variable metida por paramtero
+     * @return nos devuelve true o false dependiendo de si el String del nombre
+     * o de los apellidos son correctos o no
+     */
+    public boolean ValidarString(String nombre) {
+        boolean EsValido = true;
+        boolean N = nombre.matches("([a-z]|[A-Z]|\\s)+");
+
+        if (N == true) {
+            return EsValido;
+        } else {
+            return EsValido = false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "usuario{" + "id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", email=" + email + '}';
     }
 
 }

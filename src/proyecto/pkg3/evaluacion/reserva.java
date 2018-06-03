@@ -19,16 +19,19 @@ public class reserva {
 
     public reserva() {
     }
-    
+
     /**
-     * 
-     * @param id
+     *
+     * @param id este campo identifica a cada uno de las reservas que forman
+     * una gira y no podra ser menor de 0.
      * @param fechamax
-     * @param fechacanje 
+     * @param fechacanje
      */
     public reserva(int id, Calendar fechamax, Calendar fechacanje) {
         if (this.id > 0) {
             this.id = id;
+        } else {
+            System.out.println("ID invalido");
         }
         this.fechamax = fechamax;
         this.fechacanje = fechacanje;
@@ -56,6 +59,11 @@ public class reserva {
 
     public void setFechacanje(Calendar fechacanje) {
         this.fechacanje = fechacanje;
+    }
+
+    @Override
+    public String toString() {
+        return "reserva{" + "id=" + id + ", fechamax=" + fechamax + ", fechacanje=" + fechacanje + '}';
     }
 
 }

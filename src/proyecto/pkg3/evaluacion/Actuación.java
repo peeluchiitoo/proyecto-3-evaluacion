@@ -11,10 +11,13 @@ public class Actuación {
     int id, NumeroSecuencia, duración;
 
     /**
-     * 
-     * @param id
-     * @param NumeroSecuencia
-     * @param duración 
+     *
+     * @param id este campo identifica a cada uno de las actuaciones que forman
+     * una gira y no podra ser menor de 0
+     * @param NumeroSecuencia identifica el numero de posicion de una actuacion
+     * dentro de un concierto
+     * @param duración la duracion es el campo que contiene los minutos que dura
+     * dicha actuacion
      */
     public Actuación(int id, int NumeroSecuencia, int duración) {
         if (this.id > 0) {
