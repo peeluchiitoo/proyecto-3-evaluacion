@@ -29,7 +29,9 @@ public class Concierto {
         if (this.id > 0) {
             this.id = id;
         }
-        this.hora = hora;
+        if (this.hora <= 23 && this.hora >= 0) {
+            this.hora = hora;
+        }
         this.fecha = fecha;
     }
 
@@ -73,9 +75,9 @@ public class Concierto {
         String c = " ";
         String[] conciertos = {"Arenal sound", "Tomorrowland", "Rebujas", "BBK"};
         System.out.println("lista de conciertos:"
-                + "1. Arenal sound" 
-                + "2. Tomorrowland" 
-                + "3. Rebujas" 
+                + "1. Arenal sound"
+                + "2. Tomorrowland"
+                + "3. Rebujas"
                 + "4. BBK");
         System.out.println("Dime el nombre del concierto___");
         c = teclado.nextLine();
